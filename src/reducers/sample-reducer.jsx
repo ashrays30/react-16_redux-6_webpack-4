@@ -1,14 +1,10 @@
 import initialState from './initial-state';
-import {FETCH_SAMPLE, RECEIVE_SAMPLE} from '../actions/action-types';
+import {GET_FEATURE_FLAGS} from '../actions/action-types';
 
-export default function sample(state = initialState.sample, action) {
-  let newState;
+export function featureFlagReducer(state = initialState, action) {
   switch (action.type) {
-    case FETCH_SAMPLE:
-      return action;
-    case RECEIVE_SAMPLE:
-      newState = action.sample;
-      return newState;
+    case GET_FEATURE_FLAGS:
+      return state.featureFlag[action.payload];
     default:
       return state;
   }

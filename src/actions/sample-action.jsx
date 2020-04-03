@@ -1,11 +1,11 @@
 import * as types from './action-types';
 
-export function receiveSample(json) {
-  return {type: types.RECEIVE_SAMPLE, sample: json.sample};
+export function receiveSample(featureFlagKey) {
+  return {type: types.GET_FEATURE_FLAGS, payload: featureFlagKey};
 }
 
-export function fetchSample() {
+export function fetchFeatureFlag(featureFlagKey) {
   return dispatch => {
-    dispatch(receiveSample({sample: 'Sample test'}));
+    dispatch(receiveSample(featureFlagKey))
   };
 }

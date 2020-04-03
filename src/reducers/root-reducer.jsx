@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import sample from './sample-reducer';
+import { featureFlagReducer as featureFlag } from './sample-reducer';
 
 const rootReducer = combineReducers({
-  sample
+  featureFlag
 });
 
 export default rootReducer;

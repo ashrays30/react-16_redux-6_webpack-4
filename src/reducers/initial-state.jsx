@@ -1,3 +1,6 @@
 export default {
-    sample: []
+    sample: [],
+    featureFlag: {
+        VirtualNetworkFlag: true
+    }
 };
